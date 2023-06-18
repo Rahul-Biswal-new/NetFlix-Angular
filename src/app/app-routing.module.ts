@@ -6,7 +6,7 @@ import { MovieDetailsComponent } from './pages/movie-details/movie-details.compo
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: HomeComponent},
   {path: 'search', component: SearchComponent},
   {path: 'movie/:id', component: MovieDetailsComponent},
 ];
