@@ -8,15 +8,15 @@ import { Component, HostListener } from '@angular/core';
 export class NavbarComponent {
   navbg:any;
 
-  @HostListener('document:scroll') scrollOver(){
-    console.log(document.body.scrollTop, 'scrolllength#');
+//   @HostListener('document:scroll') scrollOver(){
+//     console.log(document.body.scrollTop, 'scrolllength#');
 
-    if(document.body.scrollTop> 0 || document.documentElement.scrollTop>0){
-      this.navbg={
-        'background-color': '#000000'
-      }
-    }else{
-      this.navbg={}
-  }
-}
+//     if(document.body.scrollTop> 0 || document.documentElement.scrollTop>0){
+//       this.navbg={
+//         // 'background-color': '#000000'
+//       }
+//     }else{
+//       this.navbg={}
+//   }
+// }
 }

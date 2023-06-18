@@ -8,7 +8,8 @@ import { MovieAPIService } from 'src/app/servive/movie-api.service';
 })
 export class HomeComponent implements OnInit {
   bannerResults : any=[];
-  title:any;
+  trendingMovieResults : any=[];
+
 
   constructor(private service:MovieAPIService){}
 
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.bannerData();
+    this.trendingMovies();
   }   
 
 
@@ -25,6 +27,14 @@ export class HomeComponent implements OnInit {
       console.log(result, 'bannerresult#');
       this.bannerResults = result.results;
     });
+  }
+
+  // trendingmovies
+  trendingMovies(){
+    this.service.trendingMoviesApiData().subscribe((result)=>{
+      console.log(result, 'trendingMovies');
+      this.trendingMovieResults = result.results;
+    })
   }
 
 }
