@@ -68,7 +68,7 @@ export class MovieAPIService {
   // fetch adventure movies
   fetchAdventureMovies():Observable<any>{
     return this.http.get(
-      `${this.baseUrl}/discover/movie?api_key=${this.apikey}&with_geners=12`
+      `${this.baseUrl}/discover/movie?api_key=${this.apikey}&with_geners=13`
       )
   }
 

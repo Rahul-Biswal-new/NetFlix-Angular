@@ -101,4 +101,12 @@ export class HomeComponent implements OnInit {
   }
   
 
+
+  // adventure movies
+  adventureMovies(){
+    this.service.fetchAdventureMovies().subscribe((result)=>{
+      this.adventureMovieResults = result.results;
+    });
+  }
+
 }
