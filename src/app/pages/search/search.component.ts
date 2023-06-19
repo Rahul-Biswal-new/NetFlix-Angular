@@ -8,8 +8,9 @@ import {MovieAPIService} from 'src/app/servive/movie-api.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
-constructor(private service: MovieAPIService) {}
+  // inputname: any= "spiderman";
+  
+  constructor(private service: MovieAPIService) {}
 
 ngOnInit(): void {
   }

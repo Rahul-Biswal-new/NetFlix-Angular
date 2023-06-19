@@ -23,5 +23,5 @@ h5
 
 .row{
     height: 250px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }

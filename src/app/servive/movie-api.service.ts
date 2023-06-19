@@ -26,11 +26,33 @@ export class MovieAPIService {
   }
 
 
+  // search movies
   searchMovies(data:any):Observable<any>{
     console.log(data, "movie#");
-
     return  this.http.get(
       `${this.baseUrl}/search/movie?api_key=${this.apikey}&query=${data.movieName}`
     );
   }
+
+  // getmovie details
+  getMovieDetails(data:any):Observable<any>{
+    return this.http.get(
+      `${this.baseUrl}/movie/${data}?api_key=${this.apikey}`
+    )
+  };
+
+  // get movie video
+  getMovieVideo(data:any):Observable<any>{
+    return this.http.get(
+    `${this.baseUrl}/movie/${data}/videos?api_key=${this.apikey}`
+    )
+  };
+
+
+   // get movie cast
+   getMovieCast(data:any):Observable<any>{
+    return this.http.get(
+    `${this.baseUrl}/movie/${data}/credits?api_key=${this.apikey}`
+    )
+  };
 }
