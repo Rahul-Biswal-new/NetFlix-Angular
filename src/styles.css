@@ -6,4 +6,5 @@
 body{
     font-family: 'ubuntu', sans-serif;
     background-color: #000000;
+    overflow-x: hidden;
 }

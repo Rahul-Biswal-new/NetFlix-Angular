@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     this.service.trendingMoviesApiData().subscribe((result)=>{
       console.log(result, 'trendingMovies');
       this.trendingMovieResults = result.results;
-    })
+    });
   }
 
 }
