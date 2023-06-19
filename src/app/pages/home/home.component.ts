@@ -9,6 +9,15 @@ import { MovieAPIService } from 'src/app/servive/movie-api.service';
 export class HomeComponent implements OnInit {
   bannerResults : any=[];
   trendingMovieResults : any=[];
+  actionMovieResults : any=[];
+  adventureMovieResults : any=[];
+  animationMovieResults : any=[];
+  comedyMovieResults : any=[];
+  documentryMovieResults : any=[];
+  scienceFrictionMovieResults : any=[];
+  thrillerMovieResults: any=[];
+
+
 
 
   constructor(private service:MovieAPIService){}
@@ -18,6 +27,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.bannerData();
     this.trendingMovies();
+    this.actionMovies();
+    this.animationMovies();
+    this.comedyMovies();
+    this.documentaryMovies();
+    this.scienceFrictionMovies();
+    this.thrillersMovies();
   }   
 
 
@@ -36,5 +51,54 @@ export class HomeComponent implements OnInit {
       this.trendingMovieResults = result.results;
     });
   }
+
+
+  // action movies
+  actionMovies(){
+    this.service.fetchActionMovies().subscribe((result)=>{
+      // console.log(result, 'actionMovies');
+      this.actionMovieResults = result.results;
+    });
+  }
+
+
+  // action movies
+  animationMovies(){
+    this.service.fetchAnimationMovies().subscribe((result)=>{
+      this.animationMovieResults = result.results;
+    });
+  }
+
+  // comedy movies
+  comedyMovies(){
+    this.service.fetchComedyMovies().subscribe((result)=>{
+      this.comedyMovieResults = result.results;
+    });
+  }
+
+  // documentary movies
+  documentaryMovies(){
+    this.service.fetchDocumentryMovies().subscribe((result)=>{
+      this.documentryMovieResults = result.results;
+    });
+  }
+
+
+
+  // science=friction movies
+  scienceFrictionMovies(){
+    this.service.fetchScienceFrictionMovies().subscribe((result)=>{
+      this.scienceFrictionMovieResults = result.results;
+    });
+  }
+
+
+   // thrillers movies
+   thrillersMovies(){
+    this.service.fetchThrillersMovies().subscribe((result)=>{
+      this.thrillerMovieResults = result.results;
+    });
+  }
+  
 
 }
